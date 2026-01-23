@@ -1,6 +1,6 @@
 # SecurityGate
 
-Projeto pessoal em Python com Docker, focado em **autenticação simples**, **requisição HTTP** e **construção de workflows de CI**, com ênfase em **verificações de segurança automatizadas** usando GitHub Actions.
+Projeto pessoal para construção de workflows em CI, com execução de testes automatizados e verificações de segurança em pipelines usando GitHub Actions.
 
 ---
 
