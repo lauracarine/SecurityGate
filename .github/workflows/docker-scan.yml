@@ -23,19 +23,19 @@ jobs:
 
       # 3 - Build da imagem Docker
       - name: Build Docker image
-        run: docker build -t projeto_user .
+        run: docker build -t securitygate .
 
       # 4 - Escaneamento de vulnerabilidades com Trivy
       - name: Run Trivy scan
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@0.20.0 #uses: aquasecurity/trivy-action@master
         with:
           image-ref: securitygate
           scan-type: image
           ignore-unfixed: true   # ignora vulnerabilidades não corrigidas
-          severity: CRITICAL,HIGH,MEDIUM,LOW
-          exit-code: 0           # workflow não falha por vulnerabilidades
+          severity: CRITICAL,HIGH # MEDIUM,LOW
+          exit-code: 1
 
-            # 5 - Semgrep scan
+    # 5 - Semgrep scan
       - name: Run Semgrep scan
         uses: returntocorp/semgrep-action@v1
         with:
