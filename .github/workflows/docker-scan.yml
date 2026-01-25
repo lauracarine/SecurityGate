@@ -29,7 +29,7 @@ jobs:
       - name: Run Trivy scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: projeto_user
+          image-ref: securitygate
           scan-type: image
           ignore-unfixed: true   # ignora vulnerabilidades não corrigidas
           severity: CRITICAL,HIGH,MEDIUM,LOW
