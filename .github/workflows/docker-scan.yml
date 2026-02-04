@@ -41,3 +41,14 @@ jobs:
         with:
           config: "auto"
         continue-on-error: true
+
+    # - Escaneamento de CVEs nas dependencias(SCA)
+      - name: Run Trivy filesystem scan (SCA)
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: fs
+          scan-ref: .
+          security-checks: vuln
+          format: json
+          output: trivy-cves.json
+          exit-code: 0
