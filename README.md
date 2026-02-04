@@ -140,5 +140,10 @@ Os resultados das verificações de segurança ficam disponíveis diretamente no
   - Pull Requests sejam barrados até correção
 - Estrutura pensada para fácil reaproveitamento em outros projetos de estudo em DevSecOps
 
+ ## Atualização de Segurança
+
+Foi adicionado ao projeto um **scan de dependências (SCA)** com **Trivy**, permitindo a identificação de **vulnerabilidades conhecidas (CVEs)** nas bibliotecas utilizadas.
+
+
 
 
